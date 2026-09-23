@@ -1,0 +1,107 @@
+%!TeX program = xelatex
+\documentclass{SYSUReport}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{adjustbox} % 加入调整表格大小的宏包
+\usepackage{booktabs} % 用于创建更漂亮的表格
+\usepackage{multirow} % 用于合并单元格
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{amsmath}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{gray!10},      % 背景色
+    basicstyle=\ttfamily\small,           % 基本字体
+    keywordstyle=\color{blue!70!black},   % 关键字颜色
+    commentstyle=\color{green!40!black},  % 注释颜色
+    stringstyle=\color{purple!60!black},  % 字符串颜色
+    numbers=left,                         % 行号
+    numberstyle=\tiny\color{gray},
+    frame=single,                         % 边框
+    breaklines=true,                      % 自动换行
+    captionpos=b                          % caption 在底部
+}
+
+\lstset{style=mystyle}
+
+
+% 根据个人情况修改
+\headl{学号 姓名}
+\headr{数据安全和隐私保护}
+\lessonTitle{数据安全和隐私保护}
+\reportTitle{数据安全和隐私保护第x次实验}
+\stuname{姓名}
+\stuid{学号}
+\inst{网络空间安全学院}
+\major{网络空间安全}
+% 修改为具体日期
+\date{2026 年 9 月 10 日}
+
+\begin{document}
+
+\cover
+\thispagestyle{empty} % 首页不显示页码
+\clearpage
+
+
+\tableofcontents
+\clearpage
+
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{实验要求}
+
+把每次实验要求粘贴过来就行，不粘贴删掉这个section也行。
+
+\section{实验原理}
+
+根据具体实验简单介绍实验原理。
+
+\section{实验设置}
+
+简单介绍下实验使用的软硬件版本和复现方法/算法是什么。
+
+\section{实验过程}
+
+结合实验操作和实验结果描述实验过程，并附带必要的实验分析。
+
+\section{实验总结}
+
+写自己的实验总结、实验心得
+
+%以下是一些贴图、引用和贴代码（示例为matlab）的示例，latex具体语法可以自行上网/gpt搜索
+% 首先我们先对S-UNIWARD算法隐写的结果进行可视化，下图\ref{fig:bbp01}-图\ref{fig:bbp02}分别对应嵌入率payload=0.1、0.2、0.3、0.4、0.5bbp的结果。图中的cover为原图像，embedding changes对应嵌入信息，Stego Image对应隐写后图像。可以看到，随着嵌入率bbp的提高，嵌入的信息越多，对原图像的修改量就越大（但用肉眼仍然难以分辨）。
+
+% \begin{figure}[h!t!b!p]
+%     \centering
+%     \includegraphics[width=0.8\linewidth]{bbp1.png}
+%     \caption{payload=0.1bbp时隐写结果}
+%     \label{fig:bbp01}
+% \end{figure}
+
+% \begin{figure}[h!t!b!p]
+%     \centering
+%     \includegraphics[width=0.8\linewidth]{bbp2.png}
+%     \caption{payload=0.2bbp时隐写结果}
+%     \label{fig:bbp02}
+% \end{figure}
+
+% \begin{lstlisting}[language=Matlab, caption={S-UNIWARD 隐写嵌入代码}]
+% clc; clear all;
+
+% coverPath = 'Bossbase_1.01/';
+% payloads = [0.1, 0.2, 0.3, 0.4, 0.5];
+% sPaths = {'stego_01','stego_02','stego_03','stego_04','stego_05'};
+% \end{lstlisting}
+
+% 如需参考文献可以取消以下两行代码注释并在reference.bib中添加bib引用，然后在正文中用\ref引用
+% \bibliographystyle{ieeetr}   % 或 plain / unsrt / IEEEtran 等
+% \bibliography{reference}    
+
+\end{document}
