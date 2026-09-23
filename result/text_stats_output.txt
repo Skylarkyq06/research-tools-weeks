@@ -1,0 +1,12 @@
+文件: sample.txt
+总词数: 12    不同单词数: 9
+出现次数最多的前 9 个单词:
+ 1. hello                        3
+ 2. codex                        2
+ 3. cc                           1
+ 4. figure                       1
+ 5. git                          1
+ 6. github                       1
+ 7. latex                        1
+ 8. switch                       1
+ 9. world                        1
