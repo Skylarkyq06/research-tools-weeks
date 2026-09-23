@@ -3,105 +3,136 @@
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{tikz-qtree}
-\usepackage{adjustbox} % 加入调整表格大小的宏包
-\usepackage{booktabs} % 用于创建更漂亮的表格
-\usepackage{multirow} % 用于合并单元格
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{multirow}
 \usepackage{graphicx}
 \usepackage{longtable}
-\usepackage{amsmath}
-
 \usepackage{listings}
 \usepackage{xcolor}
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{gray!10},      % 背景色
-    basicstyle=\ttfamily\small,           % 基本字体
-    keywordstyle=\color{blue!70!black},   % 关键字颜色
-    commentstyle=\color{green!40!black},  % 注释颜色
-    stringstyle=\color{purple!60!black},  % 字符串颜色
-    numbers=left,                         % 行号
+    backgroundcolor=\color{gray!10},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue!70!black},
+    commentstyle=\color{green!40!black},
+    stringstyle=\color{purple!60!black},
+    numbers=left,
     numberstyle=\tiny\color{gray},
-    frame=single,                         % 边框
-    breaklines=true,                      % 自动换行
-    captionpos=b                          % caption 在底部
+    frame=single,
+    breaklines=true,
+    captionpos=b
 }
 
 \lstset{style=mystyle}
 
-
-% 根据个人情况修改
-\headl{学号 姓名}
-\headr{数据安全和隐私保护}
+\headl{24347014 陳泳强}
+\headr{实验一：实验基础工具使用}
 \lessonTitle{数据安全和隐私保护}
-\reportTitle{数据安全和隐私保护第x次实验}
-\stuname{姓名}
-\stuid{学号}
+\reportTitle{实验一：实验基础工具使用}
+\stuname{陳泳强}
+\stuid{24347014}
 \inst{网络空间安全学院}
 \major{网络空间安全}
-% 修改为具体日期
-\date{2026 年 9 月 10 日}
+\date{2026 年 9 月 24 日}
 
 \begin{document}
 
 \cover
-\thispagestyle{empty} % 首页不显示页码
+\thispagestyle{empty}
 \clearpage
-
 
 \tableofcontents
 \clearpage
-
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
 \section{实验要求}
 
-把每次实验要求粘贴过来就行，不粘贴删掉这个section也行。
+\begin{enumerate}
+  \item 掌握 LaTeX 图片插入方法，插入至少一张矢量结果图，包含图编号、图标题和正文引用。
+  \item 掌握 Git 和 GitHub 的基本使用方法，完成仓库创建、克隆、提交、上传和更新。
+  \item 完成 Codex 的安装和基本配置，下载并配置 CC Switch，使用 Codex 完成至少一次任务。
+  \item 实验报告包含操作步骤、关键命令、过程截图、代码修改情况及实验总结。
+\end{enumerate}
 
 \section{实验原理}
 
-根据具体实验简单介绍实验原理。
+\subsection{Git}
+Git 是分布式版本控制系统。工作区保存正在编辑的文件，暂存区保存准备提交的变化，
+commit 把暂存内容记录到本地仓库，push 上传到 GitHub，pull 拉取远程更新。
+
+\subsection{Codex 与 CC Switch}
+Codex 是 AI 辅助编程工具，能在授权范围内读取项目、修改文件并运行本地工具。
+CC Switch 用于管理 Codex 的供应商配置，可将请求转发到 DeepSeek 等第三方 API。
+
+\subsection{LaTeX 图片排版}
+矢量图保存曲线、文字和几何对象，缩放时保持清晰。科研图表优先导出为 PDF。
+LaTeX 通过 graphicx 宏包插入图片，caption 负责图题，label 与 ref 建立引用。
 
 \section{实验设置}
 
-简单介绍下实验使用的软硬件版本和复现方法/算法是什么。
+\begin{itemize}
+  \item 操作系统：Windows
+  \item Git 版本：2.53.0.windows.2
+  \item Python 版本：3.13.12
+  \item Codex CLI 版本：0.154.0
+  \item 模型供应商：DeepSeek（通过 CC Switch 切换）
+  \item LaTeX 编译器：XeLaTeX
+\end{itemize}
 
 \section{实验过程}
 
-结合实验操作和实验结果描述实验过程，并附带必要的实验分析。
+\subsection{Git 与 GitHub}
+
+\subsubsection{安装与配置}
+使用 \texttt{git --version} 确认安装，使用 \texttt{git config --global} 配置姓名和邮箱。
+
+\subsubsection{仓库创建与提交}
+\begin{lstlisting}[language=bash]
+git clone https://github.com/Skylarkyq06/research-tools-weeks.git
+cd research-tools-weeks
+mkdir -p code result report figures
+git add README.md code/ result/ report/ figures/
+git commit -m "add first experiment program"
+git push -u origin main
+\end{lstlisting}
+
+\subsubsection{同步远程更新}
+在 GitHub 网页修改 README 后，本地执行 \texttt{git pull} 同步。
+
+\subsection{Codex 与 CC Switch}
+
+通过 npm 安装 Codex CLI，使用 CC Switch 将供应商切换为 DeepSeek。
+
+\subsubsection{Codex 辅助编程}
+让 Codex 阅读项目并完成词频统计任务，生成 \texttt{code/text\_stats.py}。
+运行结果如下：
+
+\begin{lstlisting}[language=bash]
+python code/text_stats.py sample.txt
+\end{lstlisting}
+
+\subsection{LaTeX 图片排版}
+
+使用 Codex 生成词频统计矢量图，保存为 PDF。词频统计结果如图 \ref{fig:wordfreq} 所示。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{word_freq.pdf}
+  \caption{词频统计前 10 个高频词}
+  \label{fig:wordfreq}
+\end{figure}
+
+如图 \ref{fig:wordfreq} 所示，结果以矢量图形式展示，放大后仍然清晰。
 
 \section{实验总结}
 
-写自己的实验总结、实验心得
+通过本次实验，我掌握了 Git 的基本提交流程：pull → 修改 → status/diff → add → commit → push。
+了解了 Codex 的安装、配置和使用方法，并通过 CC Switch 将供应商切换为 DeepSeek。
+学会了在 LaTeX 中插入矢量图，并规范设置图编号、图标题和正文引用。
 
-%以下是一些贴图、引用和贴代码（示例为matlab）的示例，latex具体语法可以自行上网/gpt搜索
-% 首先我们先对S-UNIWARD算法隐写的结果进行可视化，下图\ref{fig:bbp01}-图\ref{fig:bbp02}分别对应嵌入率payload=0.1、0.2、0.3、0.4、0.5bbp的结果。图中的cover为原图像，embedding changes对应嵌入信息，Stego Image对应隐写后图像。可以看到，随着嵌入率bbp的提高，嵌入的信息越多，对原图像的修改量就越大（但用肉眼仍然难以分辨）。
-
-% \begin{figure}[h!t!b!p]
-%     \centering
-%     \includegraphics[width=0.8\linewidth]{bbp1.png}
-%     \caption{payload=0.1bbp时隐写结果}
-%     \label{fig:bbp01}
-% \end{figure}
-
-% \begin{figure}[h!t!b!p]
-%     \centering
-%     \includegraphics[width=0.8\linewidth]{bbp2.png}
-%     \caption{payload=0.2bbp时隐写结果}
-%     \label{fig:bbp02}
-% \end{figure}
-
-% \begin{lstlisting}[language=Matlab, caption={S-UNIWARD 隐写嵌入代码}]
-% clc; clear all;
-
-% coverPath = 'Bossbase_1.01/';
-% payloads = [0.1, 0.2, 0.3, 0.4, 0.5];
-% sPaths = {'stego_01','stego_02','stego_03','stego_04','stego_05'};
-% \end{lstlisting}
-
-% 如需参考文献可以取消以下两行代码注释并在reference.bib中添加bib引用，然后在正文中用\ref引用
-% \bibliographystyle{ieeetr}   % 或 plain / unsrt / IEEEtran 等
-% \bibliography{reference}    
+注意事项：API Key 不能写入报告、截图或 Git 仓库；提交前用 \texttt{git status} 和 \texttt{git diff} 核对修改。
 
 \end{document}
