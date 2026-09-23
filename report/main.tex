@@ -102,9 +102,33 @@ git push -u origin main
 \subsubsection{同步远程更新}
 在 GitHub 网页修改 README 后，本地执行 \texttt{git pull} 同步。
 
+提交历史如图 \ref{fig:gitlog} 所示。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/git_log_push.png}
+  \caption{Git 提交历史}
+  \label{fig:gitlog}
+\end{figure}
+
 \subsection{Codex 与 CC Switch}
 
 通过 npm 安装 Codex CLI，使用 CC Switch 将供应商切换为 DeepSeek。
+Codex 状态如图 \ref{fig:codexstatus} 所示。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/codex_status.png}
+  \caption{Codex 使用 DeepSeek 模型}
+  \label{fig:codexstatus}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/ccswitch_config.png}
+  \caption{CC Switch 供应商配置}
+  \label{fig:ccswitch}
+\end{figure}
 
 \subsubsection{Codex 辅助编程}
 让 Codex 阅读项目并完成词频统计任务，生成 \texttt{code/text\_stats.py}。
@@ -113,6 +137,13 @@ git push -u origin main
 \begin{lstlisting}[language=bash]
 python code/text_stats.py sample.txt
 \end{lstlisting}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/github_repo.png}
+  \caption{GitHub 仓库页面}
+  \label{fig:github}
+\end{figure}
 
 \subsection{LaTeX 图片排版}
 
@@ -126,6 +157,13 @@ python code/text_stats.py sample.txt
 \end{figure}
 
 如图 \ref{fig:wordfreq} 所示，结果以矢量图形式展示，放大后仍然清晰。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/py_goodrun.png}
+  \caption{词频统计程序运行结果}
+  \label{fig:textstats}
+\end{figure}
 
 \section{实验总结}
 
