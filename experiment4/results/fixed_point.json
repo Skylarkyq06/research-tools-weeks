@@ -1,0 +1,22 @@
+{
+  "K512_range": {
+    "sse_upper": 1073741824,
+    "t_half": 268451840.5,
+    "satisfies": false
+  },
+  "K16": {
+    "max_int_err": 0,
+    "max_mse_dev": 0.0035087894174237744,
+    "ranking_match": "3/3"
+  },
+  "K64": {
+    "max_int_err": 0,
+    "max_mse_dev": 0.001784553298671554,
+    "ranking_match": "3/3"
+  },
+  "K255": {
+    "max_int_err": 0,
+    "max_mse_dev": 0.0,
+    "ranking_match": "3/3"
+  }
+}

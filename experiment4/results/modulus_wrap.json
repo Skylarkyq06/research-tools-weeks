@@ -1,0 +1,10 @@
+{
+  "N": 8192,
+  "t": 65537,
+  "true_sse": 266342400,
+  "r_mod_t": 32,
+  "signed_value": 32,
+  "decrypted": 32,
+  "match_signed": true,
+  "match_true": false
+}

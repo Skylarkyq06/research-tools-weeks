@@ -1,0 +1,40 @@
+[
+  {
+    "config": "A",
+    "N": 8192,
+    "t": 536903681,
+    "q_bits": 218,
+    "ctx_gen_ms": 418.20539999753237,
+    "ctx_restore_ms": 638.8879000442103,
+    "enc_ms": 66.86980009544641,
+    "per_query_ms": {
+      "Q01": 364.8876000661403,
+      "Q02": 361.0546999843791,
+      "Q03": 370.45769998803735
+    },
+    "max_err": 0,
+    "all_correct": true,
+    "ranking_match": true,
+    "black_white": 266342400,
+    "server_no_secret": true
+  },
+  {
+    "config": "B",
+    "N": 16384,
+    "t": 536903681,
+    "q_bits": 438,
+    "ctx_gen_ms": 3090.0133000686765,
+    "ctx_restore_ms": 3838.787200045772,
+    "enc_ms": 144.7504999814555,
+    "per_query_ms": {
+      "Q01": 1997.0051000127569,
+      "Q02": 2017.051799921319,
+      "Q03": 1974.3038000306115
+    },
+    "max_err": 0,
+    "all_correct": true,
+    "ranking_match": true,
+    "black_white": 266342400,
+    "server_no_secret": true
+  }
+]
