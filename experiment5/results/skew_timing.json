@@ -1,0 +1,7 @@
+{
+  "mode": "skew",
+  "wall_clock_sec_including_ray": 56.8941675000824,
+  "num_rounds": 10,
+  "num_clients": 5,
+  "seed": 42
+}

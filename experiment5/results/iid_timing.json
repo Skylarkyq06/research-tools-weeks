@@ -1,0 +1,7 @@
+{
+  "mode": "iid",
+  "wall_clock_sec_including_ray": 54.5721623999998,
+  "num_rounds": 10,
+  "num_clients": 5,
+  "seed": 42
+}

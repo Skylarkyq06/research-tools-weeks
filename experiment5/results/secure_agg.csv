@@ -1,0 +1,11 @@
+item,values
+client0_vector,"[-41, 28, 16, -6, -7, 36, -42, 20]"
+client1_vector,"[-30, -41, 3, 48, 24, 26, 22, 29]"
+client2_vector,"[1, -38, 34, -5, 0, -13, -32, 43]"
+true_sum,"[-70, -51, 53, 37, 17, 49, -52, 92]"
+mask_sum,"[0, 0, 0, 0, 0, 0, 0, 0]"
+scenarioA_server_sum,"[-70, -51, 53, 37, 17, 49, -52, 92]"
+scenarioA_ok,True
+scenarioB_server_sum,"[-123, -11, 140, -23, 16, 205, -66, 81]"
+scenarioB_residual_mask,"[-52, 2, 121, -65, -1, 143, -46, 32]"
+scenarioB_ok,False
